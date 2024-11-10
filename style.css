@@ -1,0 +1,372 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d; /* Dark background */
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Skyblue background animation on click */
+nav a:active {
+    background-color: skyblue;
+    color: black;
+}
+
+/* Main Section Styling */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: left; /* Keep text alignment left for homepage */
+}
+
+/* Circle for Picture */
+.circle {
+    width: 250px; /* Adjust size as needed */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px; /* Space between image and text */
+    border: 5px solid skyblue; /* Skyblue border */
+}
+
+/* Profile Image Inside Circle */
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Intro Text Styling */
+.intro-text {
+    margin-left: 20px; /* Adjusted to create more space */
+}
+
+.intro-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.intro-text h1 span {
+    color: skyblue; /* Skyblue accent color for name */
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.intro-text p span {
+    color: skyblue;
+    font-weight: bold;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em; /* Adjust icon size */
+    padding: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    background-color: skyblue;
+    transform: scale(1.1);
+}
+
+/* General Sections Styling */
+section {
+    padding: 270px 30px; /* Increased padding for more space */
+    border-bottom: 1px solid gray;
+}
+
+/* Education Section Styling */
+#education {
+    display: flex; /* Use flexbox for the education section */
+    flex-direction: column; /* Stack contents vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the education section */
+}
+
+/* Skills Section Logo Styling */
+#skills .skill-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between logos */
+    padding: 20px; /* Padding around the grid */
+    justify-items: center; /* Center logos in their grid cells */
+    margin-top: 20px; /* Add margin-top to move logos down */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+#skills .skill-logos i {
+    font-size: 8em; /* Increase logo size */
+    color: skyblue; /* Change logo color if needed */
+    transition: transform 0.3s; /* Transition for scaling effect */
+}
+
+#skills .skill-logos i:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: skyblue; /* Changed to sky blue */
+    color: white; /* Change text color to white */
+    font-size: 1.5rem; /* Font size */
+    padding: 10px; /* Padding around the button */
+    border-radius: 50%; /* Rounded shape */
+    display: none; /* Hide by default */
+    transition: transform 0.3s ease, background-color 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#scrollToTop:hover {
+    background-color: #00aaff; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Show Button on Scroll */
+body.scrolled #scrollToTop {
+    display: block; /* Show when scrolled */
+}
+
+/* Contact Section Styling */
+#contact {
+    display: flex; /* Use flexbox for two-column layout */
+    flex-direction: column; /* Change to column for vertical alignment */
+    align-items: center; /* Center align everything */
+    padding: 50px 30px; /* Add padding */
+    border-bottom: 1px solid gray; /* Optional border */
+}
+
+/* Contact Section Heading Styling */
+#contact h2 {
+    font-size: 2.5em; /* Adjust font size as desired */
+    color: skyblue; /* Optional: Change color to skyblue */
+    margin-bottom: 15px; /* Optional: Add space below heading */
+}
+
+/* Contact Information Styling */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align contact info */
+    margin-top: 5px; /* Space between heading and contact info */
+}
+
+/* Contact Info Icon Styling */
+.contact-info i {
+    color: skyblue; /* Color for the icons */
+    font-size: 45px; /* Icon size */
+    margin-bottom: 2px; /* Space between icons and text */
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form elements */
+    width: 100%;
+    max-width: 500px; /* Max width for the form */
+    margin-top: 20px; /* Space above the form */
+}
+
+.contact-info p {
+    font-size: 1.3em; /* Increase text size for email and phone number */
+    color: white; /* Keep the text color */
+    margin: 0; /* Remove margin for a tighter layout */
+}
+
+/* Adjustments for Input Fields and Button */
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 1em;
+}
+
+/* Submit Button Styling */
+.contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: skyblue; /* Skyblue background for button */
+    color: black;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: white; /* Change background on hover */
+}
+
+/* Project Section Styling */
+#projects {
+    background-color: #0d0d0d; /* Dark background for projects section */
+    padding: 50px; /* Add padding around the section */
+    text-align: center; /* Center-align text */
+}
+
+/* Project Gallery Styling */
+.project-gallery {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Space between images */
+    padding: 20px; /* Padding around the gallery */
+}
+
+/* Individual Project Item Styling */
+.project-item {
+    overflow: hidden; /* Hide overflow to keep images contained */
+}
+
+/* Image Styling */
+.project-item img {
+    width: 100%; /* Make images responsive */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover the space while maintaining aspect ratio */
+    border: 2px solid #0d0d0d; /* Change border color to match the background */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-end; /* Align to the right */
+    }
+
+    .circle {
+        width: 200px; /* Adjust circle size for smaller screens */
+        height: 200px;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .intro-text h1 {
+        font-size: 2.5em;
+    }
+
+    .intro-text p {
+        font-size: 1em;
+    }
+
+    /* Adjust sections' padding */
+    section {
+        padding: 150px 15px;
+    }
+
+    /* Adjust project grid layout */
+    .project-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    /* Adjust skills section logos */
+    #skills .skill-logos {
+        grid-template-columns: repeat(3, 1fr); /* Smaller logo grid */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        scroll-behavior: smooth;
+        overflow-y: scroll; /* Ensures vertical scrolling */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .intro-text h1 {
+        font-size: 2em;
+    }
+
+    .intro-text p {
+        font-size: 0.9em;
+    }
+
+    /* Stack the project items */
+    .project-gallery {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+
+    /* Stack the skills icons */
+    #skills .skill-logos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+    }
+
+    /* Ensure sections are scrollable if overflowed */
+    section {
+        max-height: 100vh;
+        overflow-y: auto;
+        padding: 15px; /* Reduced padding for compact layout */
+    }
+
+    /* Additional adjustments for improved spacing */
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Adjust navbar for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.contactMessage{
+    color: var(--white-color);
+    font-size: var(--small-font-size);
+    position: absolute;
+    bottom: -1.6rem;
+    left: 0;
+
+}
+
+
